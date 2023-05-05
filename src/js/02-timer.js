@@ -39,14 +39,18 @@ const timer = {
   intervalId: null,
   start() {
     refs.btnEl.disabled = true;
+    refs.inputEl.disabled = true;
     this.intervalId = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = selectedDate - currentTime;
-      if(deltaTime <= 1000) {
-        return clearInterval(this.intervalId);
-      }
-      const time = convertMs(deltaTime);
+      if(deltaTime > 0) {
+        const time = convertMs(deltaTime);
       updateTimer(time);
+        return 
+      } else {
+        clearInterval(this.intervalId);
+      }
+      
     }, 1000);
   }
 };
