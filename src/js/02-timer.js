@@ -46,7 +46,7 @@ const timer = {
       if(deltaTime > 0) {
         const time = convertMs(deltaTime);
       updateTimer(time);
-        return 
+        
       } else {
         clearInterval(this.intervalId);
       }
