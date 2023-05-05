@@ -1,0 +1,21 @@
+.timer {
+  display: flex;
+  font-weight: 70;
+  text-align: center;
+}
+
+.field {
+  font-size: 40px;
+  color: rgb(13, 7, 27);
+  padding-top: 10px;
+}
+
+.value{
+  padding: 15px;
+}
+
+.label {
+  display: block;
+  padding-top: 5px;
+  font-size: 18px;
+}
